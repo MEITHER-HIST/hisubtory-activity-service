@@ -13,7 +13,6 @@ class UserViewedEpisode(models.Model):
         db_table = "library_userviewedepisode"
         unique_together = ('user', 'episode')
         managed = True
-        app_label = 'library'
 
     def __str__(self):
         return f"{self.user} - {self.episode.title}"
@@ -28,7 +27,6 @@ class Bookmark(models.Model):
         db_table = "library_bookmark"
         unique_together = ('user', 'episode')
         managed = True
-        app_label = 'library'
 
     def __str__(self):
         return f"{self.user} - 북마크: {self.episode.title}"
